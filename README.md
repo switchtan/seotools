@@ -41,3 +41,11 @@ usecase:
 * 域名/dns：dnspod
 * 网站统计：api
 * 服务器：vultr
+
+
+自动化安装脚本运行：
+wget https://github.com/switchtan/seotools/archive/master.zip
+unzip master.zip
+cp seotools-master/* ./
+python3 run.py
+python3 plugins.py
