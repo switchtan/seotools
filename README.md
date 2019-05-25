@@ -44,8 +44,8 @@ usecase:
 
 
 自动化安装脚本运行：
-wget https://github.com/switchtan/seotools/archive/master.zip \n
-unzip master.zip \n
-cp seotools-master/* ./ \n
-python3 run.py \n
-python3 plugins.py \n
+wget https://github.com/switchtan/seotools/archive/master.zip;
+unzip master.zip ;
+cp seotools-master/* ./ ;
+python3 run.py ;
+python3 plugins.py ;
