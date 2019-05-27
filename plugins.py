@@ -8,7 +8,15 @@ for item in list1:
 	str=str+"wget --quiet http://downloads.wordpress.org/plugin/"+item+".zip\n"
 	str=str+"unzip -q "+item+".zip\n"
 	str=str+"mv "+item+" ./wp-content/plugins/\n"
+
+
+pathnow= os.getcwd()
+x_path=pathnow.split('/')
+domain_name=x_path[-1]
+str = str+ 'curl http://'+domain_name+'/active_plugins.php'
+
 print(str)
+
 f = open('wp-plugins.sh','w')
 f.write(str)
 f.close()
