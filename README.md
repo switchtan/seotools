@@ -24,6 +24,7 @@ usecase:
 * 2.3 监测收录（需要持续记录）
 * 2.4 检测关键词排名 （需要持续记录）
 * 2.5 接受搜索引擎蜘蛛来访数据（api接口） （需要持续记录）
+* 2.6 HTTP state 查询http://tool.chinaz.com/pagestatus/?url=www.1111vv.com
 
 竞争对手研究
 * 8.1 添加网站（url，tdk自动获取，评语）
