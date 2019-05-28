@@ -43,6 +43,16 @@ usecase:
 * 网站统计：api
 * 服务器：vultr
 
+月报表
+* 1号前，服务器数量 站点数
+* 有收录站点数，收录站点数百分比
+* 按服务器分类，排列收录站点数/收录站点数占该服务器的总站点数
+
+
+
+
+
+
 
 自动化安装脚本运行：
 wget https://github.com/switchtan/seotools/archive/master.zip;
