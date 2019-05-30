@@ -25,15 +25,16 @@ def get_index_baidu(site):
 		print(site+' 收录数：0')
 
 def get_title(site):
-	print('http://www.'+site)
+	# print('http://www.'+site)
 	html = get('http://www.'+site)
 	#print(html)
 	soup = BeautifulSoup(html, 'html.parser')
 	print(soup.title)
 
 for item in list1:
-	#get_index_baidu(item)
+
 	try:
+		get_index_baidu(item)
 		get_title(item)
 	except IOError:
 		print("Error: 没有找到文件或读取文件失败")
