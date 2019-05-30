@@ -61,5 +61,5 @@ cp seotools-master/* ./ ;
 python3 run.py ;
 python3 plugins.py ;
 
-还差自动添加站点 数据库 FTP
-自动开启采集
+* 自动添加站点 数据库 FTP
+* 自动开启采集 https://github.com/switchtan/wordpressPoster
