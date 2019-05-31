@@ -36,6 +36,7 @@ for item in list1:
 	try:
 		get_index_baidu(item)
 		get_title(item)
+		print('======================')
 	except IOError:
-		print("Error: 没有找到文件或读取文件失败")
+		print("网络连接失败")
 
