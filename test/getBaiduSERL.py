@@ -4,6 +4,7 @@ import ssl
 import urllib
 import re
 from bs4 import BeautifulSoup
+
 headers = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
     'Accept-Encoding': 'gzip, deflate, compress',
@@ -17,7 +18,7 @@ def get(url):
     resource = urllib.request.urlopen(url, data=None, timeout=10).read()
     content = str(resource, 'utf-8', 'ignore')
     return content
-def getRealLink(url):
+def getRealLink_re(url):
     rs = requests.get(url,headers=headers,timeout=10)
     matchObj = re.search(r'replace\(\"(.*)\"\)},timeout',rs.text)
     if matchObj:
@@ -30,19 +31,29 @@ def getRealLink(url):
         print(rs.text)
         return None
 
-def getSERL(word = 'python 获取搜索结果页连接'):
+from getRealURL import get_real_url
+def getSERL(word = 'PK10开奖'):
     url = 'http://www.baidu.com.cn/s?wd=' + urllib.parse.quote(word) + '&pn=0'
-    rs = requests.get(url,headers=headers,timeout=10)
+    rs = requests.get(url,headers=headers,timeout=3)
     soup = BeautifulSoup(rs.text, 'html.parser')
     tagh3 = soup.find_all('div', attrs={'class':'f13'})
     for h3 in tagh3:
         href = h3.find('a').get('href')
-        #print(href)
-        rurl=getRealLink(href)
+        print('baidu url:'+href)
+        rurl=get_real_url(href,1)
         if rurl !=None:
-            html=get(rurl)
-            print(rurl)
-            print(html)
+            # html=get(rurl)
+            print('real url:'+rurl)
+            matchObj = re.search(r'//(.*?)/',rurl)
+            # print(matchObj.group(1))
+            # print('http://ip.tool.chinaz.com/'+matchObj.group(1))
+            html=get('http://ip.tool.chinaz.com/'+matchObj.group(1))
+            soup = BeautifulSoup(html, 'html.parser')
+            lis = soup.select("p.bor-b1s span")
+            print(lis[3])
             print()
+        # break
 getSERL()
+
+#www.gdwc365.com 观察
 
