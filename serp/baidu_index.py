@@ -39,4 +39,5 @@ for item in list1:
 		print('======================')
 	except IOError:
 		print("网络连接失败")
+		print('======================')
 
