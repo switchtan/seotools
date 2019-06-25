@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import os
-
+#delete-duplicate-posts
 list1 = ['all-in-one-seo-pack', 'wp-super-cache','spiderdisplay','wp-baidu-submit','wptouch','baidu-submit-link','i3geek-mip','i3geek-baiduxzh','broken-link-checker']
 str=""
 for item in list1:
