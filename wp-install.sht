@@ -69,7 +69,7 @@ sed -i "/#@+/,/#@-/d" wp-config.php
 curl -d "weblog_title=$wptitle&user_name=$wpuser&admin_password=$wppass&admin_password2=$wppass&admin_email=$wpemail" http://$siteurl/wp-admin/install.php?step=2
 
 # Tidy up
-rmdir wordpress
+rm -rf wordpress
 rm latest.tar.gz
 rm /tmp/wp.keys
 
