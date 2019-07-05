@@ -4,6 +4,7 @@ x_path=pathnow.split('/')
 #print(x_path)
 domain_name=x_path[-1]
 domain_path=domain_name.replace('.', '_')
+domain_name=domain_name.replace('_', '.')
 print (domain_path)
 f= open("wp-install.sht","r")
 f_str=f.read()
