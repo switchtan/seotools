@@ -53,7 +53,8 @@ wpemail="admin@aaa11111122222.com"
 siteurl="{siteurl}"
 
 # Download latest WordPress and uncompress
-wget http://wordpress.org/latest.tar.gz
+#wget http://wordpress.org/latest.tar.gz
+cp ./../latest.tar.gz ./latest.tar.gz
 tar zxf latest.tar.gz
 mv wordpress/* ./
 
