@@ -39,7 +39,7 @@ usecase:
 * 15.3 收录/不收录页面对比
 
 可以运用的api
-* 域名/dns：dnspod
+* 域名/dns：dnscom/dnspod
 * 网站统计：api
 * 服务器：vultr
 
