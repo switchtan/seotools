@@ -53,13 +53,13 @@ wpemail="admin@aaa11111122222.com"
 siteurl="{siteurl}"
 
 # Download latest WordPress and uncompress
-#wget http://wordpress.org/latest.tar.gz
+wget -c -t 20 --timeout=60 --waitretry=60 http://wordpress.org/latest.tar.gz
 cp ./../latest.tar.gz ./latest.tar.gz
 tar zxf latest.tar.gz
 mv wordpress/* ./
 
 # Grab our Salt Keys
-wget -O /tmp/wp.keys https://api.wordpress.org/secret-key/1.1/salt/
+wget -c -t 20 --timeout=60 --waitretry=60 -O /tmp/wp.keys https://api.wordpress.org/secret-key/1.1/salt/
 
 # Butcher our wp-config.php file
 sed -e "s/localhost/"$mysqlhost"/" -e "s/database_name_here/"$mysqldb"/" -e "s/username_here/"$mysqluser"/" -e "s/password_here/"$mysqlpass"/" wp-config-sample.php > wp-config.php
