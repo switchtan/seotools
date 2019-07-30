@@ -67,7 +67,7 @@ sed -i '/#@-/r /tmp/wp.keys' wp-config.php
 sed -i "/#@+/,/#@-/d" wp-config.php
 
 # Run our install ...
-curl -d "weblog_title=$wptitle&user_name=$wpuser&admin_password=$wppass&admin_password2=$wppass&admin_email=$wpemail" http://$siteurl/wp-admin/install.php?step=2
+curl --resolve "$siteurl:80:127.0.0.1" -d "weblog_title=$wptitle&user_name=$wpuser&admin_password=$wppass&admin_password2=$wppass&admin_email=$wpemail" http://$siteurl/wp-admin/install.php?step=2
 
 # Tidy up
 rm -rf wordpress
