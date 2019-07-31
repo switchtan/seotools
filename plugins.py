@@ -2,7 +2,7 @@
 
 import os
 #delete-duplicate-posts
-list1 = ['all-in-one-seo-pack', 'wp-super-cache','spiderdisplay','wp-baidu-submit','wptouch','baidu-submit-link','i3geek-mip','i3geek-baiduxzh','broken-link-checker']
+list1 = ['all-in-one-seo-pack', 'wp-super-cache','spiderdisplay','autoptimize','wp-baidu-submit','wptouch','baidu-submit-link','i3geek-mip','i3geek-baiduxzh','broken-link-checker']
 str=""
 for item in list1:
 	str=str+"wget --quiet http://downloads.wordpress.org/plugin/"+item+".zip\n"
